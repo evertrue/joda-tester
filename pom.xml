@@ -27,4 +27,26 @@
     	<version>2.8.1</version>
     </dependency>
   </dependencies>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <!--groupId>org.dstovall</groupId--> <!-- not available on the central -->
+        <groupId>com.jolira</groupId>
+        <artifactId>onejar-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <configuration>
+              <mainClass>joda_tester.App</mainClass>
+              <attachToBuild>true</attachToBuild>
+            </configuration>
+            <goals>
+              <goal>one-jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
 </project>
